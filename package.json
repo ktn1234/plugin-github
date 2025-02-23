@@ -1,0 +1,64 @@
+{
+  "name": "@ktn1234/plugin-github",
+  "version": "0.0.0",
+  "description": "Github Plugin for the Maiar AI Agent Framework",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "maiar",
+    "ai",
+    "agent",
+    "framework",
+    "plugin",
+    "github"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktn1234/plugin-github.git"
+  },
+  "author": "ktn1234",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktn1234/plugin-github/issues"
+  },
+  "homepage": "https://github.com/ktn1234/plugin-github#readme",
+  "scripts": {
+    "dev": "tsup --config tsup.config.ts --watch",
+    "lint": "tsc --project tsconfig.json",
+    "lint:emit": "tsc --project tsconfig.json --noEmit false",
+    "build": "tsup --config tsup.config.ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@maiar-ai/core": "0.16.1",
+    "@octokit/core": "6.1.4",
+    "@octokit/rest": "21.1.1",
+    "@octokit/webhooks": "13.7.5",
+    "express": "4.21.2",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@octokit/webhooks-types": "7.6.1",
+    "@types/express": "5.0.0",
+    "@types/node": "22.13.1",
+    "tsup": "8.3.6",
+    "typescript": "5.7.3"
+  }
+}
