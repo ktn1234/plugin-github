@@ -46,8 +46,10 @@
     "clean": "rm -rf dist",
     "prepublishOnly": "pnpm run build"
   },
+  "peerDependencies": {
+    "@maiar-ai/core": "^0.16.1"
+  },
   "dependencies": {
-    "@maiar-ai/core": "0.16.1",
     "@octokit/core": "6.1.4",
     "@octokit/rest": "21.1.1",
     "@octokit/webhooks": "13.7.5",
